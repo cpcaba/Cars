@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #003366;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 5px auto;
+  padding: 10px 10px;
+}
+
+.form-control{
+  width: 50px;
+}
+@media (max-width: 500px) {
+  .row {
+    margin-top: 0;
+  }
+  .img-responsive {
+    margin-bottom: 20px;
+  }
+}
+.col-md-11 p{
+  font-size: 20px;
+  text-transform: full-width;
+  padding: 3.5px 0;
+}
+.btn {
+  background-color: #5499C7  ;
+  color:#000;
+}
+.btn:hover {
+  background-color: #D7BDE2;
+}
+td:last-child {
+  display:inline-grid;
+}

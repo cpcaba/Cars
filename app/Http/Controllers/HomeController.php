@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests;
+use Illuminate\Http\Request;
+use Auth;
+use App\Helpers\Helper;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //$this->middleware('auth');
+        $user = Auth::user();
+       return view('home')->with('user',$user);
+    }
+    public function registro()
+    {
+      $user = Auth::user();
+      $usertypes= Helper::getPossibleStatuses();
+      return view('auth.register')->with('user',$user)->with('usertypes',$usertypes);
+    }
+}
